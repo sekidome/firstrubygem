@@ -4,7 +4,7 @@ require_relative "sekidome_palin/version"
 
 class String
   #returns true if palindrome, else false
-  def newpalin? 
+  def palin? 
     processed == processed.reverse # here processed will use the returned value from the method processed
   end 
 

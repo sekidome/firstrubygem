@@ -6,19 +6,19 @@ require_relative "test_helper"
 
 class TestSekidomePalin < Minitest::Test
   def test_non_palin
-    refute "apple".newpalin? 
+    refute "apple".palin? 
   end
 
   def test_is_palin
-    assert "racecar".newpalin?
+    assert "racecar".palin?
   end
 
   def test_mixed_case_palin
-    assert "MaaaM".newpalin?
+    assert "MaaaM".palin?
   end
 
   def test_palin_with_punctation
-    assert "A man, a plan, a canal -  $&§$& Panama!".newpalin?
+    assert "A man, a plan, a canal -  $&§$& Panama!".palin?
   end
 
   def test_punct2

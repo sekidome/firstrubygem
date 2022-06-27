@@ -1,13 +1,27 @@
 # frozen_string_literal: true
 
-require "test_helper"
+require_relative "test_helper"
+
+# refute = assert !     == tests with refute suceed, when it evaluates to false.
 
 class TestSekidomePalin < Minitest::Test
-  def test_that_it_has_a_version_number
-    refute_nil ::SekidomePalin::VERSION
+  def test_non_palin
+    refute "apple".newpalin? 
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_is_palin
+    assert "racecar".newpalin?
+  end
+
+  def test_mixed_case_palin
+    assert "MaaaM".newpalin?
+  end
+
+  def test_palin_with_punctation
+    assert "A man, a plan, a canal -  $&§$& Panama!".newpalin?
+  end
+
+  def test_punct2
+    assert_equal "MadamImAdam", "Madam, I'm Adam!".scan(/[a-z]/i).join # try to use this kind of writing instead of ==, because error message is more helpful
   end
 end

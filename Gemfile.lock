@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sekidome_palin (0.1.0)
+    sekidome_palin (0.1.1)
       bundler (~> 2.3.14)
       minitest (~> 5.0)
       rake (~> 13.0)

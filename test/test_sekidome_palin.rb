@@ -24,4 +24,12 @@ class TestSekidomePalin < Minitest::Test
   def test_punct2
     assert_equal "MadamImAdam", "Madam, I'm Adam!".scan(/[a-z]/i).join # try to use this kind of writing instead of ==, because error message is more helpful
   end
+
+  def test_number_true
+    assert 1221.palin?
+  end
+
+  def test_number_false
+    refute 1227211.palin?
+  end
 end
